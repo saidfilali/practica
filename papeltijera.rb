@@ -71,3 +71,4 @@ class RockPaperScissorsGame
 end
  
 game = RockPaperScissorsGame.new
+puts "*****"
