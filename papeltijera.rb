@@ -72,3 +72,4 @@ end
  
 game = RockPaperScissorsGame.new
 puts "*****"
+puts "*****"
