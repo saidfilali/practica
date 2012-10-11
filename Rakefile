@@ -1,16 +1,11 @@
-task :default => :rps
+task :default => :test
 
-desc "Run ppt.rb with ruby"
-task :rps do
-  sh "ruby ppt.rb scissors"
+desc "Run ./bin/calradio.rb "
+task :simple do
+  sh "ruby -Ilib bin/calradio.rb"
 end
 
-desc "makes a tar.gz with all the files"
-task :tar do
-  sh "tar  cvzf rockpaperscissors.tar.gz *.rb README Rakefile"
-end
-
-desc "clean the temporal files"
-task :clean do
-  sh "rm -fr *.gz *~ *swp"
+desc "Run ./test/tc_calradio.rb"
+task :test do 
+  sh "ruby -Ilib test/tc_calradio.rb"
 end
