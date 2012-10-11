@@ -6,8 +6,8 @@ require "test/unit"
 class TestRadio < Test::Unit::TestCase
  
   def test_simple
-    assert_in_delta(0.318471338, Radio.new(2).calradio(),0.00001,"Son iguales")
-    assert_in_delta(0.477707006, Radio.new(3).calradio(),0.00001,"Son iguales")
+    assert_in_delta(0.796178344, Radio.new(5).calradio(),0.00001,"Son iguales")
+    assert_in_delta(0.955414013, Radio.new(6).calradio(),0.00001,"Son iguales")
   end
   
   def test_typecheck
@@ -15,6 +15,7 @@ class TestRadio < Test::Unit::TestCase
   end
   
   def test_failure
-    assert_in_delta(0.318471338, Radio.new(3).calradio(),0.00001,"No son Iguales")
+    assert_in_delta(0.159235669, Radio.new(7).calradio(),0.00001,"No son Iguales")
   end
 end
+

@@ -11,5 +11,5 @@ class Radio
   def calradio(  )
     ((@x)/(2*(3.14)))
   end
-
+ 
 end
