@@ -1,11 +1,5 @@
-task :default => :test
+$:.unshift File.dirname(__FILE__) + 'lib'
 
-desc "Run ./bin/calradio.rb "
-task :simple do
-  sh "ruby -Ilib bin/calradio.rb"
-end
-
-desc "Run ./test/tc_calradio.rb"
-task :test do 
-  sh "ruby -Ilib test/tc_calradio.rb"
-end
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new
+task :default => :spec
